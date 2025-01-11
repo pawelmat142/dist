@@ -1,0 +1,1 @@
+{"version":3,"file":"profile-path-param-getter.js","sourceRoot":"","sources":["../../../src/profile/auth/profile-path-param-getter.ts"],"names":[],"mappings":";;;AAAA,2CAAwE;AAG3D,QAAA,UAAU,GAAG,IAAA,6BAAoB,EAC1C,CAAC,KAAc,EAAE,GAAqB,EAAc,EAAE;IACpD,MAAM,OAAO,GAAG,GAAG,CAAC,YAAY,EAAE,CAAC,UAAU,EAAE,CAAC;IAChD,OAAO,OAAO,CAAC,OAAqB,CAAA;AACtC,CAAC,CACJ,CAAC"}

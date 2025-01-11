@@ -1,0 +1,30 @@
+import { ProfileService } from '../profile/profile.service';
+import { ProfileEmailService } from '../profile/profile-email.service';
+import { Profile } from '../profile/model/profile.model';
+import { ArtistViewDto } from '../artist/model/artist-view.dto';
+import { Connection } from 'mongoose';
+import { ArtistsGenerator } from './data/artists-generator';
+import { BookingsGenerator } from './data/bookings-generator';
+import { Booking } from '../booking/model/booking.model';
+export declare class DataGeneratorService {
+    private readonly profileService;
+    private readonly profileEmailService;
+    private readonly artistsGenerator;
+    private readonly bookingsGenerator;
+    private readonly connection;
+    private readonly logger;
+    constructor(profileService: ProfileService, profileEmailService: ProfileEmailService, artistsGenerator: ArtistsGenerator, bookingsGenerator: BookingsGenerator, connection: Connection);
+    readonly MANAGER_EMAIL = "manager@test";
+    readonly MANAGER_2 = "SynthSphere Booking";
+    readonly MANAGER_2_EMAIL = "manager@synth-sphere-booking.com";
+    MANAGER: Profile;
+    ARTISTS: ArtistViewDto[];
+    PROMOTERS: Profile[];
+    BOOKINGS: Booking[];
+    dataGenerator(): Promise<void>;
+    cleanDatabase(): Promise<void>;
+    private generatePromoters;
+    private generateManagers;
+    private generateManager;
+    private generatePromoter;
+}
