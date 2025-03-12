@@ -1,0 +1,33 @@
+import { Profile } from "src/profile/profile.model";
+import { ServiceProvider } from "../services.provider";
+import { WizardStep } from "./wizard";
+import { ProfileWizard } from "./profile.wizard";
+export declare class CreateGoalWizard extends ProfileWizard {
+    private readonly START;
+    private readonly ERROR;
+    private readonly FREQ_SELECT;
+    private readonly BYHOUR_SELECT;
+    private readonly BYHOUR_SELECT_WARNING;
+    private readonly BYMINUTE_SELECT;
+    private readonly BYMINUTE_SELECT_WARNING;
+    private readonly CONFIRM;
+    private readonly BDAY_SELECT;
+    private readonly BYMONTHDAY_SELECT;
+    private readonly BYMONTHDAY_SELECT_WARNING;
+    private readonly NOTIFICATION;
+    private readonly SUCCESS;
+    constructor(profile: Profile, services: ServiceProvider);
+    private name;
+    private rrule;
+    private notificationEnabled;
+    getSteps(): WizardStep[];
+    private prepareMessage;
+    private getFreqButtons;
+    private selectStepByFreq;
+    private selectByhour;
+    private selectByminute;
+    private selectMinutesButtons;
+    private selectBymonthday;
+    private selectDayOfWeekButtons;
+    private createGoal;
+}
